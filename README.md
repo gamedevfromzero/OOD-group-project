@@ -1,4 +1,4 @@
-# Java console application for estimating impact of recycling on the environment
+# JSRT 12 - Java Sustainable Recycling Tool 12. Console application for estimating impact of recycling on the environment and recycling guidance
 
 ### Abstract:
 This is a group project for the **Kristianstad University** course **DA121A VT26** Object-Oriented Design. The main goal is to write a program that utilize "Responsible Consumption and Production" [Sustainable Development Goal 12](https://globalgoals.org/goals/12-responsible-consumption-and-production/). The project itself is a Java application with console interface and various text menus for navigation. The code is written in Java with regard to Object-Oriented Design principles and aims to showcase the course material knowledge of students. The project simulates the real working environment and development process that students will experience in the future. 
@@ -35,11 +35,12 @@ A recycling guidance will assign itself to the products and materials by it's cu
 |--------------|------|---------------------------------------------------------------------------------------|
 | *h* or help  | **help** dialog | Show this menu or extra help on the certain dialog option.                 |
 | *n* or new   | **new** dialog | Create a new material/product/category/guidance/report or a new project.    |                                                     
-| *r* or read  | **read from disk** dialog | Load a saved material/product/category/guidance/report or a saved project. |
+| *r* or read  | **read** from disk dialog | Load a saved material/product/category/guidance/report or a saved project using .json format. |
 | *l* or list  | **list** dialog | List all existing material/product/category/guidance/report or open projects. |
 | *e* or edit  | **edit** dialog | Edit an existing material/product/category/guidance/report or active project. |
 | *s* or show  | **select** dialog | Select certain material/product/category/guidance/report or switch active project. |
-| *w* or write | **write to disk** dialog | Use to save material/product/category/guidance/report or active project. |
+| *w* or write | **write** to disk dialog | Use to save material/product/category/guidance/report or active project using .json format. |
+| *a* or about | **about** information | Show application information and authors. |
 | *q* or quit  | **quit** dialog | Self explanatory. Close the application. | 
 
 ## Project architecture
@@ -47,21 +48,30 @@ The application follows the DDD principle and internaly consists of 3 layers
 - Presentation
 - Application
 - Domain
-  
+
 The application follows the defined [UML class diagram](docs/UML.puml) that defines the relations between classes.
 
+The code is designed according to main Object-Oriented Design principles: 
 The application emphasizes **maintainable, testable, and well-structured code**, demonstrating clear responsibility distribution and professional development practices.
-
-The description of the project can be found in [docs/project_description.md](docs/project_description.md) file.
-
-The distributed roles across group members can be found in [docs/roles.md](docs/roles.md) file.
 
 This project is designed and tested with Java 25. There is no 100% guarantee that the project will work on older versions of Java but it most litkely will, since this project uses pretty stable API from Java 17 and above.
 
 ---
 
-## Roles
-Lead developer: Vladyslav Yanchuk
+## Team
+Current developers
+| Role | Name |
+|------|------|
+| Lead developer | Vladyslav Yanchuk |
+| Design Validator | Bonniface Mwangi Maina |
+| Domain Logic Developer | Bonniface Mwangi Maina | 
+
+Former developers
+| Role | Name | 
+|------|------|
+| *Console UI Developer* | *Maksym Ignatiev* | 
+| *Concept Researcher & Explainer* | *Ayyub Lindroos* |
+| | *Shady Khalil* |
 
 ## Run the project
 
