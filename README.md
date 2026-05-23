@@ -1,12 +1,53 @@
-# Sustainable Product and Recycling Management System ([SDG 12](https://globalgoals.org/goals/12-responsible-consumption-and-production/))
+# Java console application for estimating impact of recycling on the environment
 
-This Java console application is a **menu-driven system for managing products and recyclable materials**, designed with **object-oriented principles** and **test-driven development** practices in mind. It allows users to:
+### Abstract:
+This is a group project for the **Kristianstad University** course **DA121A VT26** Object-Oriented Design. The main goal is to write a program that utilize "Responsible Consumption and Production" [Sustainable Development Goal 12](https://globalgoals.org/goals/12-responsible-consumption-and-production/). The project itself is a Java application with console interface and various text menus for navigation. The code is written in Java with regard to Object-Oriented Design principles and aims to showcase the course material knowledge of students. The project simulates the real working environment and development process that students will experience in the future. 
 
-- Define and manage products and reusable material types
-- Calculate environmental impact using multiple interchangeable strategies
-- Provide recycling guidance for single- and mixed-material products
-- Maintain a clean separation between business logic and user interaction
+### Functionality:
+The program introduce terms material, product, category, recycling guidance (reffered as guidance), environmental report and recycling report (reffered as report), and project.  
+- Material - abstract material that has defined properties required for environmental impact calculation.
 
+- Product - abstract product that has list of materials and it's ratio in total mass or 1 kg of product. Also has total weight and lifespan property.
+
+- Recycling category - abstract recycling category that has a range of acceptable material and/or product properties. Applied automatically to the suitable products and/or materials.
+
+- Recycling guidance - textual description of recycling guidance for selected recycling category(s).
+
+- Environmental/Recycling report - estimated environental impact of product recyclement and recycling guidance for material(s) and/or product(s).
+
+- Project - collection of added materials, products, categories and reports. Can be saved, loaded or switched to facilitate usage of the program for the end user.
+
+## How to use?
+Program starts with an empty project with basic materials. User have to add new product(s) and may add new materia(s). 
+> [!NOTE]
+> It is possible to load it directly from file or directory from a .json file or load the whole project.
+
+After that user can make a new report that will include the product(s) **recycling impact** on **environment**.
+> [!NOTE]
+> To make report include recycling guidance, materials and products should have suitable **recycling category** and **recycling guidance** assigned to it.
+
+A recycling guidance will assign itself to the products and materials by it's custom filter. Then a recycling guidance should be written and assigned for recycling category to show up in the report. User can create, load or switch between different projects within one console window. If user wants to save the project, it has to specify a path where project file will be written and materials, productss, categories, guidances and reports will be stored in subfolders. It gives the opportunity to combine previously generated information and use it more flexible. 
+> [!NOTE]
+> The whole project with all products, materials, categories, guidances and reports can be saved and loaded by *write* and *read* dialog option.
+
+## Menu options
+| Menu option  | Name |                                     Description                                       |
+|--------------|------|---------------------------------------------------------------------------------------|
+| *h* or help  | **help** dialog | Show this menu or extra help on the certain dialog option.                 |
+| *n* or new   | **new** dialog | Create a new material/product/category/guidance/report or a new project.    |                                                     
+| *r* or read  | **read from disk** dialog | Load a saved material/product/category/guidance/report or a saved project. |
+| *l* or list  | **list** dialog | List all existing material/product/category/guidance/report or open projects. |
+| *e* or edit  | **edit** dialog | Edit an existing material/product/category/guidance/report or active project. |
+| *s* or show  | **select** dialog | Select certain material/product/category/guidance/report or switch active project. |
+| *w* or write | **write to disk** dialog | Use to save material/product/category/guidance/report or active project. |
+| *q* or quit  | **quit** dialog | Self explanatory. Close the application. | 
+
+## Project architecture
+The application follows the DDD principle and internaly consists of 3 layers
+- Presentation
+- Application
+- Domain
+  
 The application follows the defined [UML class diagram](docs/UML.puml) that defines the relations between classes.
 
 The application emphasizes **maintainable, testable, and well-structured code**, demonstrating clear responsibility distribution and professional development practices.
@@ -18,6 +59,9 @@ The distributed roles across group members can be found in [docs/roles.md](docs/
 This project is designed and tested with Java 25. There is no 100% guarantee that the project will work on older versions of Java but it most litkely will, since this project uses pretty stable API from Java 17 and above.
 
 ---
+
+## Roles
+Lead developer: Vladyslav Yanchuk
 
 ## Run the project
 
